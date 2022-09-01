@@ -1,12 +1,29 @@
 <template>
-<v-row>
-  <v-col>
-  <!-- we will change the id to be like the name + something so users will see   /articles/raptorsWinGame vs /articles/123-3214345-7-4564564-1 -->
-  <div>your article id is {{$route.params.id}}</div>
-  <div>{{article}}</div>
-  <img :src="coverImageUrl" alt="">
-  </v-col>
-</v-row>
+  <div>
+    <Nav />
+    <container align="center" justify="center">
+      <v-row>
+        <v-img :src="`${article.attributes.cover.data.attributes.url}`" class="grey lighten-2" height="750px" width="1500px">
+          <v-row class="fill-height pa-3" align="center">
+            <v-col cols="12" md="7" offset-md="5">
+              <h1 class="display-3 font-weight-light">The Art Of Travel</h1>
+
+              <div class="subheading text-uppercase pl-2 mb-4">Finding Beauty, One flight at a time</div>
+
+              <v-btn color="primary" depressed> Subscribe </v-btn>
+            </v-col>
+          </v-row>
+        </v-img>
+      </v-row>
+      <v-row>
+        <v-col>
+          <div class="form-control" type="text" id="view-container-wiki" readonly v-html="article.attributes.content"></div>
+          <div>{{ article }}</div>
+          <img :src="coverImageUrl" alt="" />
+        </v-col>
+      </v-row>
+    </container>
+  </div>
 </template>
 
 <script>
@@ -20,21 +37,17 @@ export default {
   },
   data() {
     return {
-      key: 'blah'
+      key: 'blah',
     }
   },
-  mounted() {
-  },
+  mounted() {},
   computed: {
     // computed property to obtain new absolute image URL
-    coverImageUrl(){
-      //const url = this.$store.state.url
-      const url = "http://localhost:1337";
-      //const imagePath = this.article.Image.data.attributes.url
-      const imagePath = this.article.attributes.Image.data[0].attributes.formats.small.url
-      return url + imagePath
-    }
-  }
+    coverImageUrl() {
+      const imagePath = this.article.attributes.cover.data.attributes.formats.small.url
+      return imagePath
+    },
+  },
 }
 </script>
 

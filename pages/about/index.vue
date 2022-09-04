@@ -7,10 +7,9 @@
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
       <!-- MDB -->
       <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
-      <Nav />
     </header>
     <!--Main layout-->
-    <main class="d-flex justify-content-center">
+    <main class="v-flex justify-content-center">
       <div class="container">
         <section class="border-bottom mb-4">
           <!--Section: Landing Page Strapi content-->

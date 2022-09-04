@@ -1,8 +1,7 @@
 <template>
   <div>
-    <Nav />
     <v-container>
-      <article-card v-for="article in articles" :key="article.id" :article="article" />
+      <article-card v-for="article in articles" :key="article.id" :article="article"/>
     </v-container>
     <Footer />
   </div>

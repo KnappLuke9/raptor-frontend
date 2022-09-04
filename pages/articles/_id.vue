@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Nav />
     <container align="center" justify="center">
       <v-row>
         <v-img :src="`${article.attributes.cover.data.attributes.url}`" class="grey lighten-2" height="750px" width="1500px">

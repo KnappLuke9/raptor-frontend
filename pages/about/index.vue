@@ -1,19 +1,9 @@
 <template>
   <v-app>
-    <header>
-      <!-- Font Awesome -->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-      <!-- Google Fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-      <!-- MDB -->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
-    </header>
     <!--Main layout-->
     <main class="v-flex justify-content-center">
       <div class="container">
         <section class="border-bottom mb-4">
-          <!--Section: Landing Page Strapi content-->
-
           <v-carousel>
             <v-carousel-item v-for="(item, i) in foundLanding[0].attributes.carousel.data" :key="i" :src="item.attributes.url" reverse-transition="fade-transition" transition="fade-transition"></v-carousel-item>
           </v-carousel>

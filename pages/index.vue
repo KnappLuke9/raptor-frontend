@@ -3,18 +3,12 @@
     <div>
       <!--Main Navigation-->
       <header>
-        <!-- Font Awesome -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-        <!-- MDB -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
         <!-- Background image -->
-        <div class="p-5 text-center bg-image" style="background-image: url('https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661409326/Raptors_4_4031ef8922.jpg'); height: 600px; margin-top: 58px">
+        <div class="p-5 text-center bg-image" style="background-image: url('https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661409326/Raptors_4_4031ef8922.jpg'); height: 600px;">
           <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
             <div class="d-flex justify-content-left align-items-center h-100">
               <div class="text-white">
-                <h1 class="mb-3">Ratpors Floorball Club</h1>
+                <h1 class="mb-3">Raptors Floorball Club</h1>
                 <h4 class="mb-3">Develop Compete Respect</h4>
               </div>
             </div>
@@ -93,87 +87,66 @@
             <!--Grid column-->
 
             <!--Grid column-->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 ">
               <!--Section: Sidebar-->
-              <section class="sticky-top" style="top: 80px">
+              <section class="sticky-top " style="top: 80px">
                 <h1>Upcoming Events</h1>
-                <section>
                   <div class="card">
-                    <div class="row card-body">
-                      <img class="col-sm-6" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
-                      <div class="col-sm-6">
-                        <h5 class="card-title">14-12-2022</h5>
-                        <p class="card-text">Raptors white - Pirates<br />Super awesome venue<br />00:00pm</p>
+                    <div class="row card-body ma-0 pa-0">
+                      <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
+                      <div class="col-sm-8">
+                        <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
                       </div>
                     </div>
                   </div>
-                </section>
-                <section>
-                  <div class="card">
-                    <div class="row card-body">
-                      <div class="col-sm-6">
-                        <h5 class="card-title">14-12-2022</h5>
-                        <p class="card-text">Raptors white - Pirates<br />Super awesome venue<br />00:00pm</p>
+                                    <div class="card">
+                    <div class="row card-body ma-0 pa-0">
+                      <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
+                      <div class="col-sm-8">
+                        <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
                       </div>
-                      <img class="col-sm-6" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
                     </div>
                   </div>
-                </section>
-                <section>
-                  <div class="card">
-                    <div class="row card-body">
-                      <div class="col-sm-6">
-                        <h5 class="card-title">14-12-2022</h5>
-                        <p class="card-text">Raptors white - Pirates<br />Super awesome venue<br />00:00pm</p>
+                                    <div class="card">
+                    <div class="row card-body ma-0 pa-0">
+                      <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
+                      <div class="col-sm-8">
+                        <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
                       </div>
-                      <img class="col-sm-6" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
                     </div>
                   </div>
-                </section>
-                <section>
                   <div class="card">
-                    <div class="row card-body">
-                      <div class="col-sm-6">
-                        <h5 class="card-title">14-12-2022</h5>
-                        <p class="card-text">Raptors white - Pirates<br />Super awesome venue<br />00:00pm</p>
+                    <div class="row card-body ma-0 pa-0">
+                      <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
+                      <div class="col-sm-8">
+                        <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
                       </div>
-                      <img class="col-sm-6" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
                     </div>
                   </div>
-                </section>
-                <section>
                   <div class="card">
-                    <div class="row card-body">
-                      <div class="col-sm-6">
-                        <h5 class="card-title">14-12-2022</h5>
-                        <p class="card-text">Raptors white - Pirates<br />Super awesome venue<br />00:00pm</p>
+                    <div class="row card-body ma-0 pa-0">
+                      <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
+                      <div class="col-sm-8">
+                        <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
                       </div>
-                      <img class="col-sm-6" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
                     </div>
                   </div>
-                </section>
-                                <section>
                   <div class="card">
-                    <div class="row card-body">
-                      <div class="col-sm-6">
-                        <h5 class="card-title">14-12-2022</h5>
-                        <p class="card-text">Raptors white - Pirates<br />Super awesome venue<br />00:00pm</p>
+                    <div class="row card-body ma-0 pa-0">
+                      <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
+                      <div class="col-sm-8">
+                        <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
                       </div>
-                      <img class="col-sm-6" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
                     </div>
                   </div>
-                </section>
-                                <section>
                   <div class="card">
-                    <div class="row card-body">
-                      <div class="col-sm-6">
-                        <h5 class="card-title">14-12-2022</h5>
-                        <p class="card-text">Raptors white - Pirates<br />Super awesome venue<br />00:00pm</p>
+                    <div class="row card-body ma-0 pa-0">
+                      <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
+                      <div class="col-sm-8">
+                        <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
                       </div>
-                      <img class="col-sm-6" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
                     </div>
                   </div>
-                </section>
               </section>
               <!--Section: Sidebar-->
             </div>

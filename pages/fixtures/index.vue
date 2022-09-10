@@ -1,37 +1,72 @@
 <template>
-  <div class="block galleryBlock">
-    <v-container>
-      <h2 class="text-center">Gallery</h2>
-      <v-row class="pa-md-16 mx-lg-auto">
-        <v-col v-for="article in articles" :key="article.id" class="pa-md-4 mx-lg-auto" cols="1" lg="3" sm="12">
-          <v-card flat tile class="d-flex">
-              <v-img :src="article.attributes.cover.data.attributes.formats.small.url" aspect-ratio="1" class="grey lighten-2" >
-            </v-img>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
-  </div>
+  <v-card>
+    <v-card-title>
+      Nutrition
+      <v-spacer></v-spacer>
+      <v-text-field
+        v-model="search"
+        append-icon="mdi-magnify"
+        label="Search"
+        single-line
+        hide-details
+      ></v-text-field>
+    </v-card-title>
+    <v-data-table
+      :headers="headers"
+      :items="results"
+      :search="search"
+        :footer-props="{
+    'items-per-page-options': [10, 20, 30, 40, 50]
+  }"
+    >
+      <template #item.title.rendered="{ item }">
+    <!-- <a target="_blank" :href="`tel:${item.title.rendered}`">
+      {{ item.title.rendered }}
+    </a> -->
+    <a :href="`/`">
+      {{ item.title.rendered }}
+    </a>
+  </template>
+    </v-data-table>
+  </v-card>
 </template>
 
 
 <script>
-export default {
-  //Async will block user nav until this call finishes.
-  //We can show the user a load bar or something if we expect it to be a phat one
+import axios from 'axios'
+
+  export default {
+    data () {
+      return {
+        search: '',
+        headers: [
+          {
+            text: 'Title',
+            align: 'start',
+            sortable: false,
+            value: 'title.rendered',
+          },
+          { text: 'Date', value: 'date' },
+          { text: 'League', value: 'leagues[0]' },
+          { text: 'Season', value: 'seasons[0]' },
+          { text: 'Venue', value: 'venues[0]' },
+          { text: 'Result', value: 'main_results' },
+          { text: 'Winner', value: 'winner' }
+        ]
+      }
+    },
   async asyncData({ store }) {
-    let articles = await store.dispatch('articles/getArticles')
-    //everthing you return from here is then available with this.article. It puts it into 'data'
-    return { articles }
+    let fixtures = await (await axios.get('https://seahorse-app-zkbuk.ondigitalocean.app/api/fixtures')).data.data
+    let results =[];
+
+    fixtures.forEach(element => {
+      element.attributes.content.fixtures.forEach(fixture => {
+              results.push(fixture)
+      });
+    });
+    return { results }
   },
-  data() {
-    return {
-      key: 'blah'
-    }
-  },
-  mounted() {
-  },
-}
+  }
 </script>
 
 

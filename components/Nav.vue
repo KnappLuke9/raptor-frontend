@@ -1,95 +1,107 @@
 <template>
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">Raptors</a>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ml-auto">
-        <NuxtLink to="/gallery" class="nav-link" activeClass="active">Gallery</NuxtLink>
-        <NuxtLink to="/teams" class="nav-link" activeClass="active">Teams</NuxtLink>
-        <NuxtLink to="/events" class="nav-link" activeClass="active">Events</NuxtLink>
-        <NuxtLink to="/articles" class="nav-link" activeClass="active">News</NuxtLink>
-        <NuxtLink to="/about" class="nav-link" activeClass="active">About us</NuxtLink>
+  <div>
+    <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app disable-resize-watcher temporary>
+      <v-list>
+        <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
+          <v-list-item-action>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title" />
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+    <v-app-bar :clipped-left="clipped" fixed app>
+      <v-app-bar-nav-icon class="hidden-md-and-up" @click.stop="drawer = !drawer" />
+      <div>
+        <v-tabs
+          class="hidden-sm-and-down"
+          optional
+          background-color="transparent"
+        >
+          <v-tab
+            v-for="(item, i) in items"
+            :key="i"
+            :to="item.to"
+            :ripple="false"
+            class="font-weight-bold"
+            min-width="96"
+            text
+          >
+            {{ item.title }}
+          </v-tab>
+        </v-tabs>
       </div>
-    </div>
-  </div>
-</nav> -->
- <div>
-   <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  rel="stylesheet"
-/>
-<!-- Google Fonts -->
-<link
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-  rel="stylesheet"
-/>
-<!-- MDB -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
-  rel="stylesheet"
-/>
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-      <div class="container-fluid">
-        <!-- Navbar brand -->
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
-          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarExample01">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" aria-current="page" href="/">
-              <img src="https://www.floorballwa.org/wp-content/uploads/2020/06/logo_raptors_2016_128px.png" height="60"
-              style="margin-top: -13px;" />
-              </a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" aria-current="page" href="/about">About</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/articles">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/events">Fixtures</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/gallery">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact</a>
-            </li>
-          </ul>
+      <v-spacer />
 
-          <ul class="navbar-nav d-flex flex-row">
-            <!-- Icons -->
-            <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://www.youtube.com/channel/UCQK1yC-IB69HvYeRTUo4gJA" rel="nofollow"
-                target="_blank">
-                <i class="fab fa-youtube"></i>
-              </a>
-            </li>
-            <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://www.facebook.com/RevoRaptors" rel="nofollow" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://twitter.com/RevoRaptors" rel="nofollow" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://www.instagram.com/revoraptorsfc" rel="nofollow" target="_blank">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
- </div>
+      <!-- Put socials here -->
+          <div class="social-icons-nav">
+            <a href="#">
+              <i class="mdi mdi-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="mdi mdi-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="mdi mdi-youtube"></i>
+            </a>
+            <a href="#">
+              <i class="mdi mdi-instagram"></i>
+            </a>
+          </div>
+    </v-app-bar>
+  </div>
 </template>
 
+<script>
+  export default {
+      name: "DefaultLayout",
+      data() {
+        return {
+            clipped: false,
+            drawer: false,
+            fixed: false,
+            items: [
+                {
+                    icon: "mdi-apps",
+                    title: "Welcome",
+                    to: "/",
+                },
+                {
+                    icon: "mdi-chart-bubble",
+                    title: "About",
+                    to: "/about",
+                },
+                {
+                    icon: "mdi-chart-bubble",
+                    title: "Articles",
+                    to: "/articles",
+                },
+                {
+                    icon: "mdi-chart-bubble",
+                    title: "Contact",
+                    to: "/contact",
+                },
+                {
+                    icon: "mdi-chart-bubble",
+                    title: "Fixtures",
+                    to: "/fixtures",
+                },
+                {
+                    icon: "mdi-chart-bubble",
+                    title: "Gallery",
+                    to: "/gallery",
+                }
+            ],
+            miniVariant: false,
+        };
+    },
+    computed: {
+      title() { return this.$route.name }
+    }
+  }
+  </script>
 
 <style scoped>
 .ml-auto {

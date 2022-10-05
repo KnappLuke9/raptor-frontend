@@ -1,0 +1,43 @@
+.social-icons {
+  a {
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 100%;
+    margin: 0 5px;
+    transition: 0.2s ease-in;
+    color: #ff6a5b;
+    background: #345bcb;
+    &:hover {
+      transform: translate3d(0px, -5px, 0px);
+      background: #0164d3;
+      color: #ffffff;
+    }
+  }
+}
+
+.social-icons-nav {
+  a {
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 100%;
+    margin: 0 5px;
+    transition: 0.2s ease-in;
+    color: #ff6a5b;
+    background: #345bcb;
+    &:hover {
+      transform: translate3d(0px, -5px, 0px);
+      background: #0164d3;
+      color: #ffffff;
+    }
+  }
+}
+
+.footer {
+  padding: 45px 0;
+}

@@ -24,7 +24,7 @@
                 <v-carousel cycle>
                   <v-carousel-item v-for="(item, i) in foundLanding[0].attributes.carousel.data" :key="i" :src="item.attributes.url" reverse-transition="fade-transition" transition="fade-transition"></v-carousel-item>
                 </v-carousel>
-                <div class="form-control" type="text" id="view-container-wiki" readonly v-html="foundLanding[0].attributes.content"></div>
+                <div type="text" id="view-container-wiki" readonly v-html="foundLanding[0].attributes.content"></div>
                 <!--Section-->
               </section>
               <!--Section: Text-->

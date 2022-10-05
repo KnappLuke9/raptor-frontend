@@ -37,16 +37,16 @@
 
       <!-- Put socials here -->
           <div class="social-icons-nav">
-            <a href="#">
+            <a href="https://www.facebook.com/RaptorsFloorballClub">
               <i class="mdi mdi-facebook"></i>
             </a>
-            <a href="#">
+            <a href="https://twitter.com/RevoRaptors">
               <i class="mdi mdi-twitter"></i>
             </a>
-            <a href="#">
+            <a href="https://www.youtube.com/channel/UCQK1yC-IB69HvYeRTUo4gJA">
               <i class="mdi mdi-youtube"></i>
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/revoraptorsfc">
               <i class="mdi mdi-instagram"></i>
             </a>
           </div>
@@ -65,7 +65,7 @@
             items: [
                 {
                     icon: "mdi-apps",
-                    title: "Welcome",
+                    title: "Home",
                     to: "/",
                 },
                 {
@@ -78,11 +78,11 @@
                     title: "Articles",
                     to: "/articles",
                 },
-                {
-                    icon: "mdi-chart-bubble",
-                    title: "Contact",
-                    to: "/contact",
-                },
+                // {
+                //     icon: "mdi-chart-bubble",
+                //     title: "Contact",
+                //     to: "/contact",
+                // },
                 {
                     icon: "mdi-chart-bubble",
                     title: "Fixtures",

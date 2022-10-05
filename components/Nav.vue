@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app disable-resize-watcher temporary>
       <v-list>
         <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
@@ -12,7 +12,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped" fixed app>
+    <v-app-bar :clipped-left="clipped" fixed app style="background-color: #263238">
       <v-app-bar-nav-icon class="hidden-md-and-up" @click.stop="drawer = !drawer" />
       <div>
         <v-tabs
@@ -25,7 +25,7 @@
             :key="i"
             :to="item.to"
             :ripple="false"
-            class="font-weight-bold"
+            class="font-weight-bold orange--text text--darken-2"
             min-width="96"
             text
           >

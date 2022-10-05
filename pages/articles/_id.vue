@@ -1,23 +1,18 @@
 <template>
-  <v-container>
-      <v-row>
-        <v-img :src="`${article.attributes.cover.data.attributes.url}`" class="grey lighten-2" height="750px" width="1500px">
-          <v-row class="fill-height pa-3" align="center">
-            <v-col cols="12" md="7" offset-md="5">
-            </v-col>
-          </v-row>
-        </v-img>
-      </v-row>
-      <v-row>
-        <v-col>
-          <div type="text" align="center" justify="center"  readonly v-html="article.attributes.content"></div>
-        </v-col>
-      </v-row>
-  </v-container>
+  <v-app>
+    <v-img :src="`${article.attributes.cover.data.attributes.url}`" max-height="600"> </v-img>
+    <main>
+      <v-container class="px-md-16 mx-lg-auto">
+        <div type="text" align="center" justify="center" readonly v-html="article.attributes.content"></div>
+      </v-container>
+    </main>
+  </v-app>
 </template>
 
 <script>
 export default {
+//style="max-width: 1500px;"
+
   //Async will block user nav until this call finishes.
   //We can show the user a load bar or something if we expect it to be a phat one
   async asyncData({ store, route }) {

@@ -1,7 +1,7 @@
 <template>
   <base-section
     id="features"
-    class="primary"
+    style="background-color: #263238"
   >
     <v-responsive
       class="px-md-16 mx-lg-auto"

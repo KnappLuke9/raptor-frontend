@@ -4,7 +4,7 @@
     class="primary"
   >
     <v-responsive
-      class="mx-auto"
+      class="px-md-16 mx-lg-auto"
       max-width="1350"
     >
       <v-container fluid>

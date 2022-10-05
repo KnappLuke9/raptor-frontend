@@ -2,22 +2,21 @@
   <v-app>
     <!--Main layout-->
     <main class="v-flex justify-content-center">
-              <div class="bg-image" style="background-image: url('https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661815079/277585247_401806131945425_368506300352004029_n_d21dc25dae.jpg'); height: 600px;">
-          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
-            <div class="d-flex justify-content-left align-items-center h-100">
-              <div class="text-white">
-              </div>
-            </div>
-          </div>
-        </div>
-      <div class="container">
+                <v-img
+    dark
+    src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661815079/277585247_401806131945425_368506300352004029_n_d21dc25dae.jpg"
+      max-height="600"
+
+  >
+  </v-img>
+      <v-container class="px-md-16 mx-lg-auto">
         <section class="mb-4">
           <div type="text" id="view-container-wiki" readonly v-html="foundLanding[0].attributes.content"></div>
           <div class="container text-center mt-5 mb-2">
             <h1 class="mb-0">Meet our staff</h1>
             <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</span>
           </div>
-          <div class="container mt-3">
+          <v-container class="px-md-16 mx-lg-auto">
             <div class="row">
               <div class="col-md-3">
                 <div class="bg-white p-3 text-center rounded box">
@@ -94,9 +93,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </v-container>
         </section>
-      </div>
+      </v-container>
     </main>
   </v-app>
 </template>

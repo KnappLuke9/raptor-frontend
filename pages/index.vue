@@ -1,21 +1,34 @@
 <template>
   <v-app>
     <div>
-        <div class="bg-image" style="background-image: url('https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661409326/Raptors_4_4031ef8922.jpg'); height: 600px;">
-          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
-            <div class="d-flex justify-content-left align-items-center h-100">
-              <div class="text-white">
-                <h1 class="mb-3">Raptors Floorball Club</h1>
-                <h4 class="mb-3">Develop Compete Respect</h4>
-              </div>
-            </div>
-          </div>
-        </div>
+        <v-img
+    dark
+    src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661409326/Raptors_4_4031ef8922.jpg"
+      max-height="600"
+    gradient="rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)"
+  >
+    <v-row
+      align="center"
+      justify="center"
+    >
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+        <h1 class="text-h4 font-weight-thin mb-4">
+          Raptors Floorball Club
+        </h1>
+        <h4 class="subheading">
+          Develop Compete Respect
+        </h4>
+      </v-col>
+    </v-row>
+  </v-img>
       <!--Main layout-->
-      <main class="mt-4 mb-5">
-        <div class="container">
+      <main>
+      <v-container  class="px-md-16 mx-lg-auto">
           <!--Grid row-->
-          <div class="row">
+          <div class="row px-md-16 mx-lg-auto">
             <!--Grid column-->
             <div class="col-md-8 mb-4">
               <!--Section: Post data-mdb-->
@@ -98,7 +111,7 @@
             <!--Grid column-->
           </div>
           <!--Grid row-->
-        </div>
+      </v-container>
         <Features/>
         <Affiliates/>
       </main>

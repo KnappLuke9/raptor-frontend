@@ -1,7 +1,6 @@
 <template>
-  <v-container>
+  <v-container class="px-md-16 mx-lg-auto">
     <main class="pa-md-4 mx-lg-auto">
-      <h2 class="text-center">Gallery</h2>
       <v-row class="pa-md-16 mx-lg-auto">
         <v-col v-for="image in images" :key="image.id" class="pa-md-4 mx-lg-auto" cols="12" lg="4" sm="6" xs="6">
           <v-card flat tile class="d-flex">

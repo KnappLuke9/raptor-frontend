@@ -1,8 +1,8 @@
 <template>
   <footer class="bg-light text-lg-start">
     <div class="text-center py-4 align-items-center" style="background-color: #263238">
-          <v-container>
-<v-row>
+          <v-container class="px-md-16 mx-lg-auto">
+<v-row class="px-md-16 mx-lg-auto">
         <!-- -----------------------------------------------
         First Column
       ----------------------------------------------- -->

@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container class="px-md-16 mx-lg-auto">
       <base-section-heading title="Who's supporting the Raptors?" />
 
       <v-slide-group>

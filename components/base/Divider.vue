@@ -54,5 +54,4 @@
 
   .base-divider.base-divider--dense .v-divider
     border-width: 2px 0 0 0 !important
-    
 </style>

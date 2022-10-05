@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
+    <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app disable-resize-watcher temporary>
       <v-list>
         <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
           <v-list-item-action>
@@ -13,8 +13,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>{{ title }}</v-toolbar-title>
+      <v-app-bar-nav-icon class="hidden-md-and-up" @click.stop="drawer = !drawer" />
       <div>
         <v-tabs
           class="hidden-sm-and-down"
@@ -37,6 +36,20 @@
       <v-spacer />
 
       <!-- Put socials here -->
+          <div class="social-icons-nav">
+            <a href="#">
+              <i class="mdi mdi-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="mdi mdi-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="mdi mdi-youtube"></i>
+            </a>
+            <a href="#">
+              <i class="mdi mdi-instagram"></i>
+            </a>
+          </div>
     </v-app-bar>
   </div>
 </template>
@@ -82,8 +95,6 @@
                 }
             ],
             miniVariant: false,
-            right: true,
-            rightDrawer: false,
         };
     },
     computed: {

@@ -12,7 +12,6 @@
           </v-col>
 
           <v-col align-self="end">
-            <v-chip class="text-uppercase ma-0" color="primary" label small @click.stop=""> Read More </v-chip>
           </v-col>
         </v-row>
       </v-img>

@@ -2,12 +2,17 @@
   <v-app>
     <!--Main layout-->
     <main class="v-flex justify-content-center">
+              <div class="bg-image" style="background-image: url('https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661815079/277585247_401806131945425_368506300352004029_n_d21dc25dae.jpg'); height: 600px;">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+            <div class="d-flex justify-content-left align-items-center h-100">
+              <div class="text-white">
+              </div>
+            </div>
+          </div>
+        </div>
       <div class="container">
-        <section class="border-bottom mb-4">
-          <v-carousel >
-            <v-carousel-item v-for="(item, i) in foundLanding[0].attributes.carousel.data" :key="i" :src="item.attributes.url" reverse-transition="fade-transition" transition="fade-transition"></v-carousel-item>
-          </v-carousel>
-          <div class="form-control" type="text" id="view-container-wiki" readonly v-html="foundLanding[0].attributes.content"></div>
+        <section class="mb-4">
+          <div type="text" id="view-container-wiki" readonly v-html="foundLanding[0].attributes.content"></div>
           <div class="container text-center mt-5 mb-2">
             <h1 class="mb-0">Meet our staff</h1>
             <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</span>
@@ -90,58 +95,9 @@
               </div>
             </div>
           </div>
-          <!--Section-->
-          <h1>Subscribe to our newsletter!</h1>
-          <form>
-            <!-- Name input -->
-            <div class="form-outline mb-4">
-              <input type="text" id="form5Example1" class="form-control" />
-              <label class="form-label" for="form5Example1">Name</label>
-            </div>
-
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-              <input type="email" id="form5Example2" class="form-control" />
-              <label class="form-label" for="form5Example2">Email address</label>
-            </div>
-            <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-4">Subscribe</button>
-          </form>
         </section>
-        <!--Section: Text-->
-
-        <!--Section: Author-->
-        <section class="border-bottom mb-4 pb-4">
-          <div class="row">
-            <h1>Contact Us!</h1>
-            <form>
-              <!-- Name input -->
-              <div class="form-outline mb-4">
-                <input type="text" id="form4Example1" class="form-control" />
-                <label class="form-label" for="form4Example1">Name</label>
-              </div>
-
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="email" id="form4Example2" class="form-control" />
-                <label class="form-label" for="form4Example2">Email address</label>
-              </div>
-
-              <!-- Message input -->
-              <div class="form-outline mb-4">
-                <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-                <label class="form-label" for="form4Example3">Message</label>
-              </div>
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
-            </form>
-          </div>
-        </section>
-        <!--Section: Author-->
       </div>
     </main>
-    <!--Main layout-->
-    <Footer />
   </v-app>
 </template>
 

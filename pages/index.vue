@@ -138,7 +138,7 @@ export default {
     return {
       stats: [
         ['10', 'Seasons'],
-        ['7', 'Championships'],
+        ['420', 'Championships'],
         ['90+', 'Players'],
         ['7', 'Teams'],
       ],

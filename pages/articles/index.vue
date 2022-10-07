@@ -1,7 +1,7 @@
 <template>
   <v-container class="px-md-16 mx-lg-auto">
-      <main class="pa-md-4 mx-lg-auto">
-      <v-row class="pa-md-16 mx-lg-auto">
+      <main class="px-md-4 mx-lg-auto">
+      <v-row class="px-md-16 mx-lg-auto">
       <article-card v-for="article in articles" :key="article.id" :article="article"/>
       </v-row>
     </main>

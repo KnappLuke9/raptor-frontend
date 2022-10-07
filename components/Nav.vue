@@ -12,7 +12,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped" fixed app style="background-color: #263238">
+    <v-app-bar :clipped-left="clipped"  fixed app style="background-color: #263238">
       <v-app-bar-nav-icon class="hidden-md-and-up" @click.stop="drawer = !drawer" />
       <div>
         <v-tabs class="hidden-sm-and-down" optional background-color="transparent">

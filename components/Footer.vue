@@ -43,9 +43,6 @@
             <a href="https://www.facebook.com/RaptorsFloorballClub">
               <i class="mdi mdi-facebook"></i>
             </a>
-            <a href="https://twitter.com/RevoRaptors">
-              <i class="mdi mdi-twitter"></i>
-            </a>
             <a href="https://www.youtube.com/channel/UCQK1yC-IB69HvYeRTUo4gJA">
               <i class="mdi mdi-youtube"></i>
             </a>

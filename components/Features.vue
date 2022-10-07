@@ -35,19 +35,19 @@
     data: () => ({
       cards: [
         {
-          icon: 'mdi-keyboard-outline',
+          icon: 'mdi-dumbbell',
           title: 'Develop',
-          text: 'Efficiently unleash media information without cross-media value. Quickly maximize value timely deliverables schemas.',
+          text: 'Raptors recognise that the development of floorball players is essential to providing a strong and competitive floorball community within Western Australia.',
         },
         {
-          icon: 'mdi-pencil-outline',
+          icon: 'mdi-run-fast',
           title: 'Compete',
-          text: 'Efficiently unleash media information without cross-media value. Quickly maximize value timely deliverables schemas.',
+          text: 'Raptors are a competition focused club, with the FWA State League summer competition and the Revolution Sports junior state leagues the primary focuses.',
         },
         {
-          icon: 'mdi-puzzle-outline',
+          icon: 'mdi-account-plus',
           title: 'Respect',
-          text: 'Efficiently unleash media information without cross-media value. Quickly maximize value timely deliverables schemas.',
+          text: 'Competition must be tough but fair and new players should feel safe and have a fun pathway forward.',
         },
       ],
     }),

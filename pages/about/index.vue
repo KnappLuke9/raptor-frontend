@@ -10,8 +10,9 @@
   >
   </v-img>
       <v-container class="px-md-16 mx-lg-auto">
-        <section class="mb-4">
-          <div type="text" id="view-container-wiki" readonly v-html="foundLanding[0].attributes.content"></div>
+              <v-container style="max-width: 900px;">
+          <div type="text"  justify="center" readonly v-html="foundLanding.attributes.content"></div>
+              </v-container>
           <div class="container text-center mt-5 mb-2">
             <h1 class="mb-0">Meet our staff</h1>
             <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</span>
@@ -94,7 +95,6 @@
               </div>
             </div>
           </v-container>
-        </section>
       </v-container>
     </main>
   </v-app>
@@ -106,7 +106,7 @@ import axios from 'axios'
 export default {
   name: 'AboutPage',
   async asyncData({ store }) {
-    let foundLanding = await (await axios.get('https://seahorse-app-zkbuk.ondigitalocean.app/api/landingpages/?populate=*')).data.data
+    let foundLanding = await (await axios.get('https://seahorse-app-zkbuk.ondigitalocean.app/api/abouts/1/?populate=*')).data.data
     console.log(foundLanding)
     //let landing = await store.dispatch('landing/getLanding')
     //everthing you return from here is then available with this.article. It puts it into 'data'

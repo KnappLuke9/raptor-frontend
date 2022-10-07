@@ -2,8 +2,8 @@
   <v-app>
     <v-img :src="`${article.attributes.cover.data.attributes.url}`" max-height="600"> </v-img>
     <main>
-      <v-container class="px-md-16 mx-lg-auto">
-        <div type="text" align="center" justify="center" readonly v-html="article.attributes.content"></div>
+      <v-container style="max-width: 900px;">
+        <div type="text" justify="center" readonly v-html="article.attributes.content"></div>
       </v-container>
     </main>
   </v-app>

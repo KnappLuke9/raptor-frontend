@@ -1,32 +1,32 @@
 <template>
   <v-app>
     <div>
-        <v-img
-    dark
-    src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661409326/Raptors_4_4031ef8922.jpg"
-      max-height="600"
-    gradient="rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)"
-  >
-    <v-row
-      align="center"
-      justify="center"
-    >
-      <v-col
-        class="text-center"
-        cols="12"
-      >
-        <h1 class="text-h4 font-weight-thin mb-4">
-          Raptors Floorball Club
-        </h1>
-        <h4 class="subheading">
-          Develop Compete Respect
-        </h4>
-      </v-col>
-    </v-row>
-  </v-img>
+      <v-img dark src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661409326/Raptors_4_4031ef8922.jpg" max-height="600" gradient="rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)">
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <h1 class="text-h4 font-weight-thin mb-4">Raptors Floorball Club</h1>
+            <h4 class="subheading">Develop Compete Respect</h4>
+          </v-col>
+        </v-row>
+      </v-img>
       <!--Main layout-->
       <main>
-      <v-container  class="px-md-16 mx-lg-auto">
+        <section id="stats">
+          <v-parallax :height="$vuetify.breakpoint.smAndDown ? 700 : 200" src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
+            <v-container fill-height>
+              <v-row class="mx-auto">
+                <v-col v-for="[value, title] of stats" :key="title" cols="12" md="3">
+                  <div class="text-center">
+                    <div class="display-3 font-weight-black mb-4 orange--text text--darken-2" v-text="value"></div>
+
+                    <div class="title font-weight-regular text-uppercase" v-text="title"></div>
+                  </div>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-parallax>
+        </section>
+        <v-container class="px-md-16 mx-lg-auto">
           <!--Grid row-->
           <div class="row px-md-16 mx-lg-auto">
             <!--Grid column-->
@@ -45,75 +45,67 @@
             <!--Grid column-->
 
             <!--Grid column-->
-            <div class="col-md-4 mb-4 ">
+            <div class="col-md-4 mb-4">
               <!--Section: Sidebar-->
               <section>
                 <h1>Upcoming Events</h1>
-                  <div class="card">
-                    <div class="row card-body ma-0 pa-0">
-                      <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
-                      <div class="col-sm-8">
-                        <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
-                      </div>
+                <div class="card">
+                  <div class="row card-body ma-0 pa-0">
+                    <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120" />
+                    <div class="col-sm-8">
+                      <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
                     </div>
                   </div>
-                                    <div class="card">
-                    <div class="row card-body ma-0 pa-0">
-                      <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
-                      <div class="col-sm-8">
-                        <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
-                      </div>
+                </div>
+                <div class="card">
+                  <div class="row card-body ma-0 pa-0">
+                    <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120" />
+                    <div class="col-sm-8">
+                      <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
                     </div>
                   </div>
-                                    <div class="card">
-                    <div class="row card-body ma-0 pa-0">
-                      <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
-                      <div class="col-sm-8">
-                        <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
-                      </div>
+                </div>
+                <div class="card">
+                  <div class="row card-body ma-0 pa-0">
+                    <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120" />
+                    <div class="col-sm-8">
+                      <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="row card-body ma-0 pa-0">
-                      <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
-                      <div class="col-sm-8">
-                        <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
-                      </div>
+                </div>
+                <div class="card">
+                  <div class="row card-body ma-0 pa-0">
+                    <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120" />
+                    <div class="col-sm-8">
+                      <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="row card-body ma-0 pa-0">
-                      <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
-                      <div class="col-sm-8">
-                        <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
-                      </div>
+                </div>
+                <div class="card">
+                  <div class="row card-body ma-0 pa-0">
+                    <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120" />
+                    <div class="col-sm-8">
+                      <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="row card-body ma-0 pa-0">
-                      <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
-                      <div class="col-sm-8">
-                        <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
-                      </div>
+                </div>
+                <div class="card">
+                  <div class="row card-body ma-0 pa-0">
+                    <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120" />
+                    <div class="col-sm-8">
+                      <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="row card-body ma-0 pa-0">
-                      <img class="col-sm-4" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661763583/placeholder_ac2e377e9f.png" alt="sans" height="120"/>
-                      <div class="col-sm-8">
-                        <p class="card-text">Raptors white - Pirates Black<br />Super awesome venue<br />12-12-2022 00:00pm <br />Sunday</p>
-                      </div>
-                    </div>
-                  </div>
+                </div>
               </section>
               <!--Section: Sidebar-->
             </div>
             <!--Grid column-->
           </div>
           <!--Grid row-->
-      </v-container>
-        <Features/>
-        <Affiliates/>
+        </v-container>
+        <Features />
+        <Affiliates />
       </main>
     </div>
   </v-app>
@@ -144,7 +136,12 @@ export default {
   },
   data() {
     return {
-      key: 'blah',
+      stats: [
+        ['10', 'Seasons'],
+        ['7', 'Championships'],
+        ['90+', 'Players'],
+        ['7', 'Teams'],
+      ],
     }
   },
   mounted() {},
@@ -152,6 +149,5 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
 

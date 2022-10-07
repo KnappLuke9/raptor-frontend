@@ -23,7 +23,7 @@
     <!-- <a target="_blank" :href="`tel:${item.title.rendered}`">
       {{ item.title.rendered }}
     </a> -->
-    <a :href="`/`">
+    <a :href="`/fixtures/${item.id}`">
       {{ item.title.rendered }}
     </a>
   </template>
@@ -67,6 +67,8 @@ import axios from 'axios'
     fixtures2021.forEach(element => {
               results.push(element.attributes.fixture)
     });
+    //need to fix the key to be unique
+    //move the fixtures from past 2 years into stored data here
 
     let fixtures2020 = await (await axios.get('https://seahorse-app-zkbuk.ondigitalocean.app/api/fixture2020s')).data.data
     console.log(fixtures2020)

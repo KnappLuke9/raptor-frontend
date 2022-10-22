@@ -34,6 +34,8 @@
 
 <script>
 import axios from 'axios'
+import usersData1 from "/assets/upload-2020.json";
+import usersData2 from "/assets/upload-2021.json";
 
   export default {
     data () {
@@ -58,23 +60,20 @@ import axios from 'axios'
   async asyncData({ store }) {
         let results =[];
 
-
-
-
-    let fixtures2021 = await (await axios.get('https://seahorse-app-zkbuk.ondigitalocean.app/api/fixture2021s')).data.data
+    let fixtures2021 = usersData1
     console.log(fixtures2021)
 
     fixtures2021.forEach(element => {
-              results.push(element.attributes.fixture)
+              results.push(element.fixture)
     });
     //need to fix the key to be unique
     //move the fixtures from past 2 years into stored data here
 
-    let fixtures2020 = await (await axios.get('https://seahorse-app-zkbuk.ondigitalocean.app/api/fixture2020s')).data.data
+    let fixtures2020 = usersData2
     console.log(fixtures2020)
 
     fixtures2020.forEach(element => {
-              results.push(element.attributes.fixture)
+              results.push(element.fixture)
     });
 
     return { results }

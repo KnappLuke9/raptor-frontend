@@ -32,7 +32,7 @@
             space="1"
           />
 
-          <base-divider :color="secondary" />
+          <base-divider :color="color" />
 
           <base-body
             v-if="text || $slots.default"

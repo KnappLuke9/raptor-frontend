@@ -18,6 +18,7 @@
 
 <script>
 export default {
+  /// force update here
   name: 'SectionAffiliates',
 }
 </script>

@@ -64,6 +64,8 @@
 </template>
 
 <script>
+import fixtures2020 from '/assets/upload-2020.json'
+import fixtures2021 from '/assets/upload-2021.json'
 export default {
   async asyncData({ store, route }) {
     const fixture = {
@@ -87,7 +89,24 @@ export default {
       // venue: "Revo Sports, Lemnos Street, Shenton Park, Western Australia"
       mapsUrl: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211.5787915042358!2d115.79729126090561!3d-31.953824438282904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae5b73c290f7eb7c!2sRevo%20Fitness%20-%20Shenton%20Park!5e0!3m2!1sen!2sau!4v1664038368751!5m2!1sen!2sau`
     }
-    return { fixture }
+
+    //get the fixture from local json
+        let results = []
+
+    fixtures2021.forEach((element) => {
+      results.push(Object.assign({ id: element.id }, element.fixture))
+    })
+
+    fixtures2020.forEach((element) => {
+      results.push(Object.assign({ id: element.id }, element.fixture))
+    })
+    results.forEach((element) => {
+      if(element.id === route.params.id) {
+        // this is the fixture we want
+        console.log(element)
+      }
+    })
+        return { fixture }
   },
   data() {
     return {

@@ -1,14 +1,7 @@
 <template>
   <v-app>
     <div>
-      <v-img dark src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1661409326/Raptors_4_4031ef8922.jpg" max-height="600" gradient="rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)">
-        <v-row align="center" justify="center">
-          <v-col class="text-center" cols="12">
-            <h1 class="text-h4 font-weight-thin mb-4">Raptors Floorball Club</h1>
-            <h4 class="subheading">Develop Compete Respect</h4>
-          </v-col>
-        </v-row>
-      </v-img>
+
       <!--Main layout-->
       <main>
         <v-container class="px-md-16 mx-lg-auto">
@@ -24,14 +17,23 @@
                 <h1>Upcoming Events</h1>
               </v-card>
               <v-container grid-list-md>
-                <v-card min-width="344" max-width="344" outlined >
+                <v-card min-width="344" max-width="344" outlined v-for="event in events" :key="event.id">
+                    <v-list-item three-line><v-list-item-content>
+                      <div class="text-overline mb-4">{{event.Time}} {{event.Date}} {{event.Day}}</div>
+                      <v-list-item-title class="text-h5 mb-1"> {{event.Division}} </v-list-item-title>
+                      <v-list-item-subtitle>{{event.Home}} - {{event.Away}}</v-list-item-subtitle>
+                    </v-list-item-content>
+                    <v-list-item-avatar tile size="80" color="grey"><v-img :src="event.Image"/></v-list-item-avatar>
+                  </v-list-item>
+                </v-card>
+                <!-- <v-card min-width="344" max-width="344" outlined >
                   <v-list-item three-line>
                     <v-list-item-content>
                       <div class="text-overline mb-4">10:00am 23-10-2022 Sunday</div>
                       <v-list-item-title class="text-h5 mb-1"> Mens Div-2 </v-list-item-title>
                       <v-list-item-subtitle>Raptors White - Pirates Pink</v-list-item-subtitle>
                     </v-list-item-content>
-                    <v-list-item-avatar tile size="80" color="grey"></v-list-item-avatar>
+                    <v-list-item-avatar tile size="80" color="grey"><v-img :src="require('/assets/raptors-orange.png')"/></v-list-item-avatar>
                   </v-list-item>
                 </v-card>
                 <v-card min-width="344" max-width="344" outlined >
@@ -41,7 +43,7 @@
                       <v-list-item-title class="text-h5 mb-1"> Mens Div-2 </v-list-item-title>
                       <v-list-item-subtitle>Raptors White - Pirates Pink</v-list-item-subtitle>
                     </v-list-item-content>
-                    <v-list-item-avatar tile size="80" color="grey"></v-list-item-avatar>
+                    <v-list-item-avatar tile size="80" color="grey"><v-img :src="require('/assets/raptors-orange.png')"/></v-list-item-avatar>
                   </v-list-item>
                 </v-card>
                 <v-card min-width="344" max-width="344" outlined >
@@ -51,7 +53,7 @@
                       <v-list-item-title class="text-h5 mb-1"> Mens Div-2 </v-list-item-title>
                       <v-list-item-subtitle>Raptors White - Pirates Pink</v-list-item-subtitle>
                     </v-list-item-content>
-                    <v-list-item-avatar tile size="80" color="grey"></v-list-item-avatar>
+                    <v-list-item-avatar tile size="80" color="grey"><v-img :src="require('/assets/raptors-orange.png')"/></v-list-item-avatar>
                   </v-list-item>
                 </v-card>
                 <v-card min-width="344" max-width="344" outlined >
@@ -61,7 +63,7 @@
                       <v-list-item-title class="text-h5 mb-1"> Mens Div-2 </v-list-item-title>
                       <v-list-item-subtitle>Raptors White - Pirates Pink</v-list-item-subtitle>
                     </v-list-item-content>
-                    <v-list-item-avatar tile size="80" color="grey"></v-list-item-avatar>
+                    <v-list-item-avatar tile size="80" color="grey"><v-img :src="require('/assets/raptors-orange.png')"/></v-list-item-avatar>
                   </v-list-item>
                 </v-card>
                 <v-card min-width="344" max-width="344" outlined >
@@ -71,7 +73,7 @@
                       <v-list-item-title class="text-h5 mb-1"> Mens Div-2 </v-list-item-title>
                       <v-list-item-subtitle>Raptors White - Pirates Pink</v-list-item-subtitle>
                     </v-list-item-content>
-                    <v-list-item-avatar tile size="80" color="grey"></v-list-item-avatar>
+                    <v-list-item-avatar tile size="80" color="grey"><v-img :src="require('/assets/raptors-orange.png')"/></v-list-item-avatar>
                   </v-list-item>
                 </v-card>
                 <v-card min-width="344" max-width="344" outlined >
@@ -81,9 +83,9 @@
                       <v-list-item-title class="text-h5 mb-1"> Mens Div-2 </v-list-item-title>
                       <v-list-item-subtitle>Raptors White - Pirates Pink</v-list-item-subtitle>
                     </v-list-item-content>
-                    <v-list-item-avatar tile size="80" color="grey"></v-list-item-avatar>
+                    <v-list-item-avatar tile size="80" color="grey"><v-img :src="require('/assets/raptors-orange.png')"/></v-list-item-avatar>
                   </v-list-item>
-                </v-card>
+                </v-card> -->
               </v-container>
             </v-col>
           </v-row>
@@ -128,10 +130,12 @@ export default {
   },
   async asyncData({ store }) {
     let foundLanding = await (await axios.get('https://seahorse-app-zkbuk.ondigitalocean.app/api/landingpages/?populate=*')).data.data
-    console.log(foundLanding)
+    let events = await (await axios.get('https://seahorse-app-zkbuk.ondigitalocean.app/api/events/1/?populate=*')).data.data.attributes.content
+
+    console.log(events)
     //let landing = await store.dispatch('landing/getLanding')
     //everthing you return from here is then available with this.article. It puts it into 'data'
-    return { foundLanding }
+    return { foundLanding , events}
   },
   data() {
     return {

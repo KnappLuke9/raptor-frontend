@@ -4,7 +4,7 @@
       <v-row class="pa-md-16 mx-lg-auto">
         <v-col v-for="image in images" :key="image.id" class="pa-md-4 mx-lg-auto" cols="12" lg="4" sm="6" xs="6">
           <v-card flat tile class="d-flex">
-              <v-img :src="image.url" aspect-ratio="1" class="grey lighten-2" @click="toggleFullscreen(image.url)"/>
+              <v-img :src="image.attributes.url" aspect-ratio="1" class="grey lighten-2" @click="toggleFullscreen(image.attributes.url)"/>
               <div v-if="selectedImage" class="overlay">
               <v-img
                 class="mt-12"
@@ -31,8 +31,8 @@ export default {
   //Async will block user nav until this call finishes.
   //We can show the user a load bar or something if we expect it to be a phat one
   async asyncData() {
-    //let images = await (await axios.get('https://seahorse-app-zkbuk.ondigitalocean.app/api/galleries/?populate=*')).data
-    let images = await (await axios.get('https://seahorse-app-zkbuk.ondigitalocean.app/api/upload/files')).data
+    let images = await (await axios.get('https://seahorse-app-zkbuk.ondigitalocean.app/api/galleries/?populate=*')).data.data[0].attributes.images.data
+    // let images = await (await axios.get('https://seahorse-app-zkbuk.ondigitalocean.app/api/upload/files')).data
     console.log(images)
     //everthing you return from here is then available with this.article. It puts it into 'data'
     return { images }

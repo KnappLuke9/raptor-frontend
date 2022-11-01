@@ -59,7 +59,7 @@
       },
       color: {
         type: String,
-        default: 'primary',
+        default: 'secondary',
       },
       icon: String,
       outlined: Boolean,

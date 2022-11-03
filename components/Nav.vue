@@ -31,44 +31,40 @@
           </v-tab> -->
           <v-tab href="/" :ripple="false" class="font-weight-bold orange--text text--darken-2" min-width="96" text> Home </v-tab>
           <v-tab href="/articles" :ripple="false" class="font-weight-bold orange--text text--darken-2" min-width="96" text> Latest News </v-tab>
-          <v-tab>
-            <v-menu open-on-hover top offset-y>
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn class="font-weight-bold orange--text text--darken-2" color="#263238" elevation="0" v-bind="attrs" v-on="on"> Fixtures and Resutls </v-btn>
-              </template>
+          <v-menu open-on-hover offset-y>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn class="pt-3 font-weight-bold orange--text text--darken-2" color="#263238" elevation="0" v-bind="attrs" v-on="on"> Fixtures and Resutls </v-btn>
+            </template>
 
-              <v-list color="#263238">
-                <v-list-item class="font-weight-bold orange--text text--darken-2" to="/fixtures" router exact>
-                  <v-list-item-title>Fixtures</v-list-item-title>
-                </v-list-item>
-                <v-list-item class="font-weight-bold orange--text text--darken-2" to="/ladder" router exact>
-                  <v-list-item-title>Ladders</v-list-item-title>
-                </v-list-item>
-                <v-list-item class="font-weight-bold orange--text text--darken-2" to="/statistics" router exact>
-                  <v-list-item-title>Stats</v-list-item-title>
-                </v-list-item>
-              </v-list>
-            </v-menu>
-          </v-tab>
-          <v-tab>
-            <v-menu open-on-hover top offset-y>
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn class="font-weight-bold orange--text text--darken-2" color="#263238" elevation="0" v-bind="attrs" v-on="on"> About </v-btn>
-              </template>
+            <v-list color="#263238">
+              <v-list-item class="font-weight-bold orange--text text--darken-2" to="/fixtures" router exact>
+                <v-list-item-title>Fixtures</v-list-item-title>
+              </v-list-item>
+              <v-list-item class="font-weight-bold orange--text text--darken-2" to="/ladder" router exact>
+                <v-list-item-title>Ladders</v-list-item-title>
+              </v-list-item>
+              <v-list-item class="font-weight-bold orange--text text--darken-2" to="/statistics" router exact>
+                <v-list-item-title>Stats</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+          <v-menu open-on-hover offset-y>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn class="pt-3 font-weight-bold orange--text text--darken-2" color="#263238" elevation="0" v-bind="attrs" v-on="on"> About </v-btn>
+            </template>
 
-              <v-list color="#263238">
-                <v-list-item class="font-weight-bold orange--text text--darken-2" to="/floorball" router exact>
-                  <v-list-item-title>What is Floorball?</v-list-item-title>
-                </v-list-item>
-                <v-list-item class="font-weight-bold orange--text text--darken-2" to="/about" router exact>
-                  <v-list-item-title>About the Club</v-list-item-title>
-                </v-list-item>
-                <v-list-item class="font-weight-bold orange--text text--darken-2" to="/sponsorship" router exact>
-                  <v-list-item-title>Sponsorship</v-list-item-title>
-                </v-list-item>
-              </v-list>
-            </v-menu>
-          </v-tab>
+            <v-list color="#263238">
+              <v-list-item class="font-weight-bold orange--text text--darken-2" to="/floorball" router exact>
+                <v-list-item-title>What is Floorball?</v-list-item-title>
+              </v-list-item>
+              <v-list-item class="font-weight-bold orange--text text--darken-2" to="/about" router exact>
+                <v-list-item-title>About the Club</v-list-item-title>
+              </v-list-item>
+              <v-list-item class="font-weight-bold orange--text text--darken-2" to="/sponsorship" router exact>
+                <v-list-item-title>Sponsorship</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
           <v-tab href="/gallery" :ripple="false" class="font-weight-bold orange--text text--darken-2" min-width="96" text> Gallery </v-tab>
         </v-tabs>
       </div>

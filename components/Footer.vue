@@ -22,8 +22,8 @@
       ----------------------------------------------- -->
           <v-col cols="12" sm="12" md="12" lg="3" class="px-xs-0">
             <h4 class="font-weight-regular font-18 orange--text text--darken-2">Email</h4>
-            <p class="mt-10 mb-0 orange--text text--darken-2">
-              <a class="dark-link" href="mailto:Bruce@spatialproperty.com.au">Bruce@spatialproperty.com.au</a>
+            <p class="mt-10 mb-0">
+              <a class="font-weight-regular font-18 blue--text text--darken-2" href="mailto:Bruce@spatialproperty.com.au">Bruce@spatialproperty.com.au</a>
             </p>
           </v-col>
           <!-- -----------------------------------------------

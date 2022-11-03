@@ -6,18 +6,18 @@
       <main>
         <v-container class="px-md-16 mx-lg-auto">
           <v-row>
-            <v-col cols="12" md="8">
+            <v-col cols="12" md="9">
               <v-carousel cycle>
                 <v-carousel-item v-for="(item, i) in foundLanding[0].attributes.carousel.data" :key="i" :src="item.attributes.url" reverse-transition="fade-transition" transition="fade-transition"></v-carousel-item>
               </v-carousel>
               <div type="text" id="view-container-wiki" readonly v-html="foundLanding[0].attributes.content"></div>
             </v-col>
-            <v-col cols="6" md="4">
-              <v-card min-width="344" max-width="344" outlined color="transparent">
+            <v-col cols="6" md="3">
+              <v-card min-width="360" max-width="360" outlined color="transparent">
                 <h1>Upcoming Events</h1>
               </v-card>
               <v-container grid-list-md>
-                <v-card min-width="344" max-width="344" outlined v-for="event in events" :key="event.id">
+                <v-card min-width="360" max-width="360" outlined v-for="event in events" :key="event.id">
                     <v-list-item three-line><v-list-item-content>
                       <div class="text-overline mb-4">{{event.Time}} {{event.Date}} {{event.Day}}</div>
                       <v-list-item-title class="text-h5 mb-1"> {{event.Division}} </v-list-item-title>
@@ -26,72 +26,12 @@
                     <v-list-item-avatar tile size="80" color="grey"><v-img :src="event.Image"/></v-list-item-avatar>
                   </v-list-item>
                 </v-card>
-                <!-- <v-card min-width="344" max-width="344" outlined >
-                  <v-list-item three-line>
-                    <v-list-item-content>
-                      <div class="text-overline mb-4">10:00am 23-10-2022 Sunday</div>
-                      <v-list-item-title class="text-h5 mb-1"> Mens Div-2 </v-list-item-title>
-                      <v-list-item-subtitle>Raptors White - Pirates Pink</v-list-item-subtitle>
-                    </v-list-item-content>
-                    <v-list-item-avatar tile size="80" color="grey"><v-img :src="require('/assets/raptors-orange.png')"/></v-list-item-avatar>
-                  </v-list-item>
-                </v-card>
-                <v-card min-width="344" max-width="344" outlined >
-                  <v-list-item three-line>
-                    <v-list-item-content>
-                      <div class="text-overline mb-4">10:00am 23-10-2022 Sunday</div>
-                      <v-list-item-title class="text-h5 mb-1"> Mens Div-2 </v-list-item-title>
-                      <v-list-item-subtitle>Raptors White - Pirates Pink</v-list-item-subtitle>
-                    </v-list-item-content>
-                    <v-list-item-avatar tile size="80" color="grey"><v-img :src="require('/assets/raptors-orange.png')"/></v-list-item-avatar>
-                  </v-list-item>
-                </v-card>
-                <v-card min-width="344" max-width="344" outlined >
-                  <v-list-item three-line>
-                    <v-list-item-content>
-                      <div class="text-overline mb-4">10:00am 23-10-2022 Sunday</div>
-                      <v-list-item-title class="text-h5 mb-1"> Mens Div-2 </v-list-item-title>
-                      <v-list-item-subtitle>Raptors White - Pirates Pink</v-list-item-subtitle>
-                    </v-list-item-content>
-                    <v-list-item-avatar tile size="80" color="grey"><v-img :src="require('/assets/raptors-orange.png')"/></v-list-item-avatar>
-                  </v-list-item>
-                </v-card>
-                <v-card min-width="344" max-width="344" outlined >
-                  <v-list-item three-line>
-                    <v-list-item-content>
-                      <div class="text-overline mb-4">10:00am 23-10-2022 Sunday</div>
-                      <v-list-item-title class="text-h5 mb-1"> Mens Div-2 </v-list-item-title>
-                      <v-list-item-subtitle>Raptors White - Pirates Pink</v-list-item-subtitle>
-                    </v-list-item-content>
-                    <v-list-item-avatar tile size="80" color="grey"><v-img :src="require('/assets/raptors-orange.png')"/></v-list-item-avatar>
-                  </v-list-item>
-                </v-card>
-                <v-card min-width="344" max-width="344" outlined >
-                  <v-list-item three-line>
-                    <v-list-item-content>
-                      <div class="text-overline mb-4">10:00am 23-10-2022 Sunday</div>
-                      <v-list-item-title class="text-h5 mb-1"> Mens Div-2 </v-list-item-title>
-                      <v-list-item-subtitle>Raptors White - Pirates Pink</v-list-item-subtitle>
-                    </v-list-item-content>
-                    <v-list-item-avatar tile size="80" color="grey"><v-img :src="require('/assets/raptors-orange.png')"/></v-list-item-avatar>
-                  </v-list-item>
-                </v-card>
-                <v-card min-width="344" max-width="344" outlined >
-                  <v-list-item three-line>
-                    <v-list-item-content>
-                      <div class="text-overline mb-4">10:00am 23-10-2022 Sunday</div>
-                      <v-list-item-title class="text-h5 mb-1"> Mens Div-2 </v-list-item-title>
-                      <v-list-item-subtitle>Raptors White - Pirates Pink</v-list-item-subtitle>
-                    </v-list-item-content>
-                    <v-list-item-avatar tile size="80" color="grey"><v-img :src="require('/assets/raptors-orange.png')"/></v-list-item-avatar>
-                  </v-list-item>
-                </v-card> -->
               </v-container>
             </v-col>
           </v-row>
         </v-container>
         <section id="stats">
-          <v-parallax :height="imageHeight" src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
+          <v-parallax :height="imageHeight" src="https://res.cloudinary.com/dpf3gjhvt/image/upload/v1667441008/Raptors_background_2_14ef044c31.jpg?updated_at=2022-11-03T02:03:38.110Z">
             <v-container fill-height>
               <v-row class="mx-auto">
                 <v-col v-for="[value, title] of stats" :key="title" cols="12" md="3">
@@ -143,7 +83,7 @@ export default {
         ['10', 'Seasons'],
         ['420', 'Championships'],
         ['90+', 'Players'],
-        ['7', 'Teams'],
+        ['6', 'Teams'],
       ],
     }
   },

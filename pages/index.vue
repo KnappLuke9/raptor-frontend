@@ -8,7 +8,7 @@
           <v-row>
             <v-col cols="12" md="9">
               <v-carousel cycle>
-                <v-carousel-item v-for="(item, i) in foundLanding[0].attributes.carousel.data" :key="i" :src="item.attributes.url" reverse-transition="fade-transition" transition="fade-transition"></v-carousel-item>
+                <v-carousel-item v-for="(item, i) in foundLanding[0].attributes.carousel.data" :key="i" reverse-transition="fade-transition" transition="fade-transition"><v-img :src="item.attributes.url" contain></v-img></v-carousel-item>
               </v-carousel>
               <div type="text" id="view-container-wiki" readonly v-html="foundLanding[0].attributes.content"></div>
             </v-col>

@@ -10,7 +10,7 @@
     <v-tabs-items v-model="tab">
       <v-tab-item v-for="item in statistics" :key="statistics.id">
         <v-container class="mx-auto" width="1200px">
-          <v-data-table :headers="headers" :items="item.attributes.content"> </v-data-table>
+          <v-data-table :headers="headers" :items="item.attributes.content" mobile-breakpoint="0"> </v-data-table>
         </v-container>
       </v-tab-item>
     </v-tabs-items>

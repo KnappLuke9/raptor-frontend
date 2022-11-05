@@ -11,15 +11,13 @@
       :footer-props="{
         'items-per-page-options': [10, 20, 30, 40, 50],
       }"
+      mobile-breakpoint="0"
     >
-      <template #item.title.rendered="{ item }">
-        <!-- <a target="_blank" :href="`tel:${item.title.rendered}`">
-      {{ item.title.rendered }} 
-    </a> -->
+      <!-- <template #item.title.rendered="{ item }">
         <a :href="`/fixtures/${item.id}`">
           {{ item.title.rendered }}
         </a>
-      </template>
+      </template> -->
       <template v-slot:item.date="{ item }">
         <span>{{ new Date(item.date).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' }) }}</span>
       </template>
